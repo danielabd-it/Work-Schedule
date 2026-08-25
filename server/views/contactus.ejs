@@ -1,0 +1,64 @@
+<%- include Partials/header.ejs %>
+
+<body class="bg-light" style="background-image: url(/Assets/images/background.jpg); background-size: cover; background-position: center; position: relative;">
+    <div class="container">
+        <%- include Partials/main_nav.ejs %>
+
+        <div class="row justify-content-center align-items-center min-vh-100" style="position: relative; z-index: 1;">
+
+            <div class="col-md-8">
+                <div class="p-4 rounded bg-light shadow" style="border: 6px solid rgb(12, 34, 61);">
+
+                    <h1>Feedback Form</h1>
+                    <form action="mailto:daniel.borrelldiaz@ontariotechu.net" method="post" enctype="text/plain" name="form">
+
+                        <div class="mb-3 fw-bold">
+                            <label for="name" class="form-label">Name:</label>
+                            <input class="form-control" type="text" name="name" placeholder="Your Complete Name" required>
+                        </div>
+
+                        <div class="mb-3 fw-bold">
+                            <label for="email" class="form-label">Email:</label>
+                            <input class="form-control" type="email" name="email" placeholder="Your Email address" required>
+                        </div>
+<div class="mb-3 fw-bold">
+                            <label for="rate" class="form-label">Rate the website out of 5:</label>
+                            <select name="rate" class="form-select" required>
+                                <option value="" disabled selected>Select a rating</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+<div class="mb-3 fw-bold">
+                            <label for="major" class="form-label">What's Your Job?:</label>
+                            <select name="major" class="form-select" required>
+                                <option value="" disabled selected>Select your job</option>
+                                <option value="Computer Science">Network Engineer</option>
+                                <option value="Software Engineer">Software Engineer</option>
+                                <option value="IT">Cyber Security Engineer</option>
+                                <option value="Cyber Security">Help Desk</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-check mb-3"> 
+                            <input type="checkbox" name="consent" class="form-check-input border border-primary border-2" id="consent" style="cursor: pointer;" required>
+                            <label for="consent" class="form-check-label">You Consent To Your Answers Being Shared Online</label>
+                        </div>
+
+                        <div class="d-flex justify-content-between fw-bold"> 
+                            <input class="btn btn-secondary" type="reset" value="Click to reset the form">
+                            <input class="btn btn-primary" type="submit" value="Click to submit the form">
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%- include Partials/footer.ejs %>
+</body>

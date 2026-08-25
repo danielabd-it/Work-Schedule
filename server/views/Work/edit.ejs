@@ -1,0 +1,60 @@
+<%- include ../Partials/header.ejs %>
+
+<body class="bg-light" style="background-image: url(/Assets/images/background.jpg); background-size: cover; background-position: center; position: relative;">
+    <div class="container">
+        
+        <%- include ../Partials/main_nav.ejs %>
+
+        <div class="row justify-content-center align-items-center min-vh-100" style="position: relative; z-index: 1;">
+            <div class="col-md-6">
+                <div class="p-4 rounded bg-light shadow" style="border: 6px solid rgb(12, 34, 61);">
+                    <h1>Edit Schedule</h1>
+                    <form class="form" method="POST">
+                        <div class="form-group">
+                            <label for="nameTextField">Employee Name</label>
+                            <input type="text" class="form-control" id="nameTextField" placeholder="Enter Name" name="Name" value="<%= Work.Name %>" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="sunTextField">Sunday Schedule</label>
+                            <input type="text" class="form-control" id="sunTextField" placeholder="Enter Sunday Schedule" name="Sun" value="<%= Work.Sun %>" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="monTextField">Monday Schedule</label>
+                            <input type="text" class="form-control" id="monTextField" placeholder="Enter Monday Schedule" name="Mon" value="<%= Work.Mon %>" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tueTextField">Tuesday Schedule</label>
+                            <input type="text" class="form-control" id="tueTextField" placeholder="Enter Tuesday Schedule" name="Tue" value="<%= Work.Tue %>" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="wedTextField">Wednesday Schedule</label>
+                            <input type="text" class="form-control" id="wedTextField" placeholder="Enter Wednesday Schedule" name="Wed" value="<%= Work.Wed %>" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="thuTextField">Thursday Schedule</label>
+                            <input type="text" class="form-control" id="thuTextField" placeholder="Enter Thursday Schedule" name="Thu" value="<%= Work.Thu %>" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="friTextField">Friday Schedule</label>
+                            <input type="text" class="form-control" id="friTextField" placeholder="Enter Friday Schedule" name="Fri" value="<%= Work.Fri %>" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="satTextField">Saturday Schedule</label>
+                            <input type="text" class="form-control" id="satTextField" placeholder="Enter Saturday Schedule" name="Sat" value="<%= Work.Sat %>" required>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <button class="btn btn-primary" type="submit" style="background-color: rgb(12, 34, 61); color: white;">Submit
+                                <i class="fas fa-edit"></i>
+                            </button>  
+                            <a href="/workslist" class="btn btn-warning" style="background-color: rgb(248, 24, 24); color: white;">
+                                Cancel <i class="fas fa-undo"></i>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<%- include ../Partials/footer.ejs %>
+</body>

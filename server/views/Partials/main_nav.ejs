@@ -1,0 +1,73 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top"  style="background-color: rgb(12, 34, 61);">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">DJD Work Scheduling</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <% if(title=="Home") {%>
+              <a class="nav-link active" href=" /home">
+            <% } else {%>
+              <a class="nav-link" href="/home">
+            <% } %>
+            <i class="fa-solid fa-house"></i> Home</a>
+          </li>
+
+          <li class="nav-item">
+            <% if(title=="Work") {%>
+              <a class="nav-link active" href=" /workslist">
+            <% } else {%>
+              <a class="nav-link" href="/workslist">
+            <% } %>
+            <i class="fa-solid fa-briefcase"></i> Work</a>
+          </li>
+
+           <li class="nav-item">
+            <% if(title=="Contact Us") {%>
+              <a class="nav-link active" href=" /contactus">
+            <% } else {%>
+              <a class="nav-link" href="/contactus">
+            <% } %>
+            <i class="fa-solid fa-address-book"></i> Contact Us</a>
+          </li>
+
+           <li class="nav-item">
+            <% if(title=="About Us") {%>
+              <a class="nav-link active" href=" /aboutus">
+            <% } else {%>
+              <a class="nav-link" href="/aboutus">
+            <% } %>
+            <i class="fa-solid fa-book"></i> About Us</a>
+          </li>
+
+          <% if (typeof displayName == 'string' && displayName) { %>
+    <li class="navbar-text">
+      <i class="fas fa-lg fa-user"></i>
+      Welcome, <%= displayName %>
+    </li>
+    <li class="nav-item">
+      <a href="/logout" class="nav-link">
+        <i class="fas fa-sign-out"></i>
+        Logout
+      </a>
+    </li>
+      <% } else { %>
+      <li class="nav-item">
+      <% if (title == "Login") { %>
+        <a href="/login" class="nav-link active">
+        <% } else { %>
+        <a href="/login" class="nav-link">
+        <% } %>
+        <i class="fas fa-lg fa-sign-in-alt"></i>
+        Login
+      </a>
+    </li>
+<% } %>
+
+        </ul>
+
+      </div>
+    </div>
+  </nav>
